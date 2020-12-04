@@ -36,6 +36,7 @@
                   <a class="nav-link" href="#">E-Lotto</a>
                 </li>
                 <li class="nav-item dropdown">
+                  @guest
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Account
                   </a>
@@ -44,13 +45,27 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ url('register') }}">Register</a>
                   </div>
+                  @else
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                      </form>
+                  @endguest
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
-              <a class="nav-link" href="#">Contact Us</a>
+                 <a class="nav-link" href="#">Contact Us</a>
             </div>
           </nav>
 

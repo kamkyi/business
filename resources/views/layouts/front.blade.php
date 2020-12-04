@@ -40,9 +40,9 @@
                     Account
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Login</a>
+                    <a class="dropdown-item" href="{{ url('login') }}">Login</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Register</a>
+                    <a class="dropdown-item" href="{{ url('register') }}">Register</a>
                   </div>
                 </li>
               </ul>
@@ -50,6 +50,7 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
+              <a class="nav-link" href="#">Contact Us</a>
             </div>
           </nav>
 

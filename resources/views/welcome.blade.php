@@ -23,18 +23,7 @@
               </div>
             </div>
          </div>
-
-         <div class="col-md-4 mb-2">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="https://lh3.googleusercontent.com/proxy/Jlu8lY6EkCrCx8eh_WEzaWGqBpQbqkuI8afxQavPkH21q-rRbxF9MP-dzx6DgXfOryAgJ31Gp15jmImjpvwtLNEGqXT04V1IS0RZm3pDIylPib4" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Lily 1000 Ks</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">See Detail</a>
-              </div>
-            </div>
-         </div>
-
+         
          <div class="col-md-4 mb-2">
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="https://assets.eflorist.com/assets/products/PHR_/TNB10-1A.jpg" alt="Card image cap">

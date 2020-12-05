@@ -21,4 +21,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
+Route::group(['namespace' => 'Admin','as'=>'admin.'],function(){
+    Route::get('admin/home','AdminController@index');
+    Route::post('admin/login','LoginController@showLoginForm');
+    Route::post('admin/login','LoginController@login');
+    Route::get('admin/password/confirm','ConfirmPasswordController@showConfirmForm')->name('password.confirm');
+    Route::post('admin/password/confirm','ConfirmPasswordController@confirm');
+    Route::post('admin/password/email','ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('admin/password/reset','ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    Route::post('admin/password/reset','ResetPasswordController@reset')->name('password.update');
+    Route::get('admin/password/reset/{token}','ResetPasswordController@showResetForm')->name('password.reset');
+});
